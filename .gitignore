@@ -1,0 +1,13 @@
+logs/
+exports/
+solutions_and_learning/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+__MACOSX/
+*.egg-info/
+dist/
+build/
+.env
+autosave.json
