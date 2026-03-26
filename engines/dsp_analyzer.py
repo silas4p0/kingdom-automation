@@ -107,6 +107,7 @@ class DSPAnalyzer:
             channels = 1
             bits = 16
 
+            raw = b""
             while True:
                 chunk_id = f.read(4)
                 if len(chunk_id) < 4:
@@ -123,7 +124,7 @@ class DSPAnalyzer:
                     break
                 else:
                     f.read(chunk_size)
-            else:
+            if not raw:
                 return [], sr
 
             samples: list[float] = []
